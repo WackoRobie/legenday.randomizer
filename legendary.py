@@ -1,10 +1,17 @@
 import random
-
-heros = ['Black Widow','Captain America','Cyclops','Deadpool','Emma Frost','Gambit','Hawkeye','Hulk','Iron Man','Nick Fury','Rogue','SpiderMan','Storm','Thor','Wolverine']
-masterminds = ['Dr Doom','Loki','Magneto','Red Skull']
-villains = ['Brotherhood','Brotherhood','Enemies of Asgard','Hydra','Emissaries of Evil','Radiation','Skrulls','Spider Foes']
-henchmen = ['Doombot Legion','Hand Ninjas','Sentinels','Savage Land Mutates']
-schemes = ['The Legacy Virus','Midtown Bank Robbery','Negative Zone Prison Breakout','Portals to the Dark Dimension',"Replace Earth's Leaders with Killbots",'Secret Invasion of the Skrull Shapeshifters','Super Hero Civil War','Unleash the Power of the Cosmic Cube']
+#
+# Read card files into respective lists
+#
+with open('heros.txt') as tempFile:
+    heros = [line.rstrip('\n') for line in tempFile]
+with open('masterminds.txt') as tempFile:
+    masterminds = [line.rstrip('\n') for line in tempFile]
+with open('villains.txt') as tempFile:
+    villains = [line.rstrip('\n') for line in tempFile]
+with open('henchmen.txt') as tempFile:
+    henchmen = [line.rstrip('\n') for line in tempFile]
+with open('schemes.txt') as tempFile:
+    schemes = [line.rstrip('\n') for line in tempFile]
 #
 # Get the number of players from user
 #
